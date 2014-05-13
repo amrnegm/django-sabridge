@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
 
 # get around issues importing sqlalchemy
-execfile('sabridge/version.py')
+filename = 'sabridge/version.py'
+exec(compile(open(filename, "rb").read(), filename, 'exec'))
 
 tests_require = [
     'Django>=1.2,<1.4',
